@@ -12,10 +12,7 @@ class MainActivity : AppCompatActivity() {
         val spinner = findViewById<Spinner>(R.id.spinner)
         val displayTextView = findViewById<TextView>(R.id.textDisplay)
 
-        val numberArray = ArrayList<Int>()
-        for(i in 5..100 step 5){
-            numberArray.add(i)
-        }
+        val numberArray = Array(20) {(it + 1) * 5}
 
         spinner.adapter = ArrayAdapter(this, android.R.layout.simple_dropdown_item_1line, numberArray)
 
